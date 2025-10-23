@@ -1,0 +1,390 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #f0f2f5;
+}
+
+label {
+  font-size: 1.17rem;
+}
+
+input {
+  height: 2rem;
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+}
+
+button {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #32a791;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+button:disabled {
+  background-color: gray;
+  cursor: default;
+}
+
+/* ------ HEADER ------ */
+
+header {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #2f2f2f;
+  background-color: #32a791;
+}
+
+#header-logo {
+  height: 34px;
+  margin-left: 10px;
+}
+
+#header-title {
+  color: white;
+}
+
+.menu-toggle {
+  display: flex;
+  margin-right: 10px;
+  color: white;
+  gap: 0.5rem;
+}
+
+#login-toggle,
+#register-toggle {
+  cursor: pointer;
+}
+
+#login-toggle:hover,
+#register-toggle:hover {
+  color: #0f0f0f;
+  transition: 500ms;
+}
+
+.login-menu,
+.register-menu {
+  position: fixed;
+  z-index: 999;
+  bottom: 0;
+  display: none;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 20px 20px 0 0;
+  background-color: #f8f8f8;
+  box-shadow: 0 0 5rem 1rem rgb(0 0 0 / 50%);
+  color: #0f0f0f;
+  gap: 1rem;
+  text-align: center;
+}
+
+.login-menu form,
+.register-menu form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.login-menu input,
+.register-menu input {
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.login-menu input:focus,
+.register-menu input:focus {
+  border: 1px solid #32a791;
+}
+
+#close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+/* ------ MAIN ------ */
+
+main {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.evaluation-form {
+  display: flex;
+  max-width: 40rem;
+  flex-direction: column;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+#form-title {
+  text-align: center;
+}
+
+.user-form {
+  display: flex;
+}
+
+.user-form label {
+  padding: 0.5rem;
+}
+
+.family-house {
+  display: flex;
+}
+
+.family-form,
+.house-form,
+.content-form,
+.rate-form,
+.textarea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 20px 20px;
+  gap: 1rem
+}
+
+.textarea {
+  position: relative;
+}
+
+#family-input {
+  display: flex;
+  width: 6.75rem;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#family-input input {
+  width: 1rem;
+  height: 1rem;
+}
+
+#house-input select {
+  height: 2rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.content-input,
+.rate-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+#textarea-input {
+  width: 100%;
+  padding-bottom: 1.5rem;
+}
+
+#counter {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  color: gray;
+  font-size: 12px;
+}
+
+.submit-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 20px 2rem;
+}
+
+#form-data {
+  max-width: 40rem;
+  flex-flow: column;
+  justify-content: center;
+  padding: 20px;
+  margin: 20px;
+  gap: 1rem;
+}
+
+.data {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.data > p {
+  max-width: 400px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.body-logo {
+  display: none;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+}
+
+.terms-register,
+.terms-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.terms-form label {
+  font-size: 1rem;
+}
+
+@media screen and (width < 640px) {
+  #header-title {
+    font-size: 1.5rem;
+  }
+
+  .user-form {
+    flex-direction: column;
+    margin: 1rem;
+  }
+
+  .user-form input {
+    border-bottom: 1px solid gray;
+    background-color: #f0f2f5;
+}
+
+  .user-form input:focus {
+    border-bottom: 1px solid #32a791;
+  }
+
+  .family-house {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .content-input {
+    width: 13.75rem;
+    flex-wrap: wrap;
+  }
+
+  .rate-input {
+    width: 12.5rem;
+    flex-wrap: wrap;
+  }
+
+  .terms-form {
+    margin: 0 20px 20px;
+  }
+
+  .terms-form label {
+    font-size: 0.9rem;
+  }
+
+  .active {
+    display: flex;
+  }
+
+}
+
+@media screen and (width >= 640px) {
+  header {
+    height: 60px;
+  }
+
+  #header-logo {
+    height: 44px;
+    margin-left: 2rem;
+  }
+
+  .menu-toggle {
+    margin-right: 2rem;
+  }
+
+  .login-menu,
+  .register-menu {
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    max-width: 400px;
+    border-radius: 20px;
+    transform: translate(-50%, -50%);
+  }
+
+  .login-menu {
+    min-height: 350px;
+  }
+
+  .register-menu {
+    min-height: 450px;
+  }
+
+  .evaluation-form {
+    padding: 1rem;
+    border: 1px solid gray;
+    border-radius: 1rem;
+    margin: 2rem;
+  }
+
+  .user-form {
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .user-form input{
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-color: #f0f2f5;
+  }
+
+  .user-form input:focus {
+    border: 1px solid #32a791;
+  }
+
+  .family-house {
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  #form-data {
+    padding: 1rem;
+    border: 1px solid gray;
+    border-radius: 1rem;
+    margin: 2rem;
+  }
+
+  .active {
+    display: flex;
+  }
+}
+
+@media screen and (width >= 1280px) {
+  .body-logo {
+    display: flex;
+    width: 50%;
+    max-width: 600px;
+    padding: 1rem;
+    margin: 2rem;
+  }
+}

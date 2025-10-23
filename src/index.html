@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>TrybeWarts</title>
+  </head>
+
+  <body>
+    <header>
+      <img id="header-logo" src="assets/trybewarts-header-logo.svg" alt="TrybeWarts Header Logo">
+      <h1 id="header-title">TrybeWarts</h1>
+      <div class="menu-toggle">
+        <div id="login-toggle">
+          <p>Log in</p>
+        </div>
+        <p>|</p>
+        <div id="register-toggle">
+          <p>Sign up</p>
+        </div>
+      </div>
+      <section class="login-menu">
+        <button id="close-btn">X</button>
+        <h2 id="login-title">Login in your account</h2>
+        <form>
+          <label for="email-login">Email:</label>
+          <input id="email-login" type="text" name="email" placeholder="Email">
+          <label for="password-login">Password:</label>
+          <input id="password-login" type="password" name="password" placeholder="Password">
+          <button id="login-btn" type="submit" disabled>Login</button>
+        </form>
+      </section>
+      <section class="register-menu">
+        <button id="close-btn">X</button>
+        <h2 id="register-title">Create your account</h2>
+        <form>
+          <label for="name-register">Name*</label>
+          <input id="name-register" type="text" placeholder="Luna Lovegood">
+          <div id="name-error" class="error-message" style="display: none;">Name must be at least 3 characters</div>
+          <label for="email-register">Email*</label>
+          <input id="email-register" type="text" name="email" placeholder="Email">
+          <div id="email-error" class="error-message" style="display: none;">Invalid email</div>
+          <label for="password-register">Password*</label>
+          <input id="password-register" type="password" name="password" placeholder="Password">
+          <div id="password-error" class="error-message" style="display: none;">Password must be at least 8 characters</div>
+          <div class="terms-register">
+            <input id="register-terms" type="checkbox">I have read and agree to the terms of use*
+          </div>
+          <button id="register-btn" type="submit" disabled>Register</button>
+        </form>
+      </section>
+    </header>
+
+    <main>
+      <form class="evaluation-form">
+        <h2 id="form-title">Satisfaction Survey</h2>
+        <section class="user-form">
+          <label id="label-name" for="name-form">Name*</label>
+          <input id="name-form" type="text" name="username" placeholder="Luna Lovegood">
+          <label id="label-email" for="email-form">Email*</label>
+          <input id="email-form" type="text" name="email" placeholder="exemple@me.com">
+        </section>
+
+        <section class="family-house">
+          <section class="family-form">
+            <label>What is your family?*</label>
+            <div id="family-input">
+              <input type="radio" name="family" value="Frontend">Frontend
+              <input type="radio" name="family" value="Backend">Backend
+              <input type="radio" name="family" value="FullStack">FullStack
+            </div>
+          </section>
+
+          <section class="house-form">
+            <label>What is your house?</label>
+            <div id="house-input">
+              <select id="house-select" name="house">
+                <option id="gitnoria-house" value="Gitnória">Gitnória</option>
+                <option id="reactpuff-house" value="Reactpuff">Reactpuff</option>
+                <option id="corvinode-house" value="Corvinode">Corvinode</option>
+                <option id="pytherina-house" value="Pytherina">Pytherina</option>
+              </select>
+            </div>
+          </section>
+        </section>
+
+        <section class="content-form">
+          <label>What content are you most excited to learn about?</label>
+          <div class="content-input">
+            <input class="subject" type="checkbox" value="HoFs">HoFs
+            <input class="subject" type="checkbox" value="Jest">Jest
+            <input class="subject" type="checkbox" value="Promises">Promises
+            <input class="subject" type="checkbox" value="React">React
+            <input class="subject" type="checkbox" value="SQL">SQL
+            <input class="subject" type="checkbox" value="Python">Python
+          </div>
+        </section>
+
+        <section class="rate-form">
+          <label>How do you rate Trybewarts?*</label>
+          <div class="rate-input">
+            <input type="radio" name="rate" value="1">1
+            <input type="radio" name="rate" value="2">2
+            <input type="radio" name="rate" value="3">3
+            <input type="radio" name="rate" value="4">4
+            <input type="radio" name="rate" value="5">5
+            <input type="radio" name="rate" value="6">6
+            <input type="radio" name="rate" value="7">7
+            <input type="radio" name="rate" value="8">8
+            <input type="radio" name="rate" value="9">9
+            <input type="radio" name="rate" value="10">10
+          </div>
+        </section>
+
+        <section class="textarea">
+          <label>Leave your comment:</label>
+          <textarea id="textarea-input" rows="6" maxlength="500"></textarea>
+          <div id="counter"></div>
+        </section>
+
+        <div class="terms-form">
+          <input id="agreement" type="checkbox">
+          <label>You agree to the use of the information above?*</label>
+        </div>
+
+        <div class="submit-form">
+          <button id="submit-form-btn" type="submit" disabled>Send</button>
+        </div>
+      </form>
+      <div id="form-data" style="display: none;"></div>
+      <img class="body-logo" src="./assets/trybewarts-colored.svg" alt="TrybeWarts Emblem">
+    </main>
+
+  </body>
+  <script src="script.js"></script>
+
+</html>
